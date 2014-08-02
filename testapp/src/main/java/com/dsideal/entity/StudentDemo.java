@@ -18,38 +18,56 @@ public class StudentDemo implements Serializable{
 	@Id
 	@GeneratedValue(generator="system-uuid")
 	@GenericGenerator(name = "system-uuid",strategy="uuid")
-	private long stuId;
+	private String stuId;
 	@Column(length=32)
 	private String name;
 	@Column(length=32)
-	private String age;
+	private int age;
 	@Column(length=32)
-	private int password;
+	private String password;
 	
-	public long getStuId() {
+	
+
+	public String getStuId() {
 		return stuId;
 	}
-	public void setStuId(long stuId) {
+
+
+	public void setStuId(String stuId) {
 		this.stuId = stuId;
 	}
+
+
 	public String getName() {
 		return name;
 	}
+
+
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getAge() {
+
+
+	public int getAge() {
 		return age;
 	}
-	public void setAge(String age) {
+
+
+	public void setAge(int age) {
 		this.age = age;
 	}
-	public int getPassword() {
+
+
+	public String getPassword() {
 		return password;
 	}
-	public void setPassword(int password) {
+
+
+	public void setPassword(String password) {
 		this.password = password;
 	}
+
+
 	public StudentDemo() {
 		super();
 		// TODO Auto-generated constructor stub
