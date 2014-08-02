@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "hibernate-configuration-3.0.dtd" >
+<hibernate-configuration>
+  <session-factory>
+  	<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+  	<property name="hibernate.connction.url">jdbc:mysql://127.0.0.1/cms</property>
+  	<property name="hibernate.connction.username">root</property>
+  	<property name="hibernate.connction.password">root</property>
+  	<property name="hibernate.connction.driver_class">com.mysql.jdbc.Driver</property>
+  	<property name="show_sql">true</property>
+  	<property name="hibernate.hbm2ddl.auto">update</property>
+  	<property name="hiberante.format_sql">true</property>
+  </session-factory>
+</hibernate-configuration>
