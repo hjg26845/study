@@ -2,10 +2,13 @@ package com.dsideal.entity;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 import org.hibernate.annotations.GenericGenerator;
 @Entity
@@ -25,8 +28,20 @@ public class StudentDemo implements Serializable{
 	private int age;
 	@Column(length=32)
 	private String password;
+	@ManyToOne()
+	@JoinColumn(name="classId")
+	private ClassDemo cd;
 	
 	
+	public ClassDemo getCd() {
+		return cd;
+	}
+
+
+	public void setCd(ClassDemo cd) {
+		this.cd = cd;
+	}
+
 
 	public String getStuId() {
 		return stuId;

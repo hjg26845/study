@@ -5,7 +5,7 @@
 <hibernate-configuration>
   <session-factory>
   	<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
-  	<property name="connection.url">jdbc:mysql://10.10.8.99:3306/cms</property>
+  	<property name="connection.url">jdbc:mysql://10.10.8.99:3306/cms?useUnicode=true&amp;characterEncoding=UTF-8</property>
   	<property name="connection.username">root</property>
   	<property name="connection.password">root</property>
   	<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
@@ -13,6 +13,8 @@
   	<property name="hibernate.hbm2ddl.auto">update</property>
   	<property name="hiberante.format_sql">true</property>
   	<property name="hibernate.current_session_context_class">thread</property>
+  	
   	<mapping class="com.dsideal.entity.StudentDemo"/>
+  	<mapping class="com.dsideal.entity.ClassDemo"/>
   </session-factory>
 </hibernate-configuration>
